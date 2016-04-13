@@ -1,5 +1,6 @@
 package Error
 
+
 import (
 "fmt"
 "log"
