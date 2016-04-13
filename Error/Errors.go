@@ -15,7 +15,7 @@ type NotExistFile struct {
 	Name             string
 }
 
-func (f *NotExistFile) Error() string {
+func (f *NotExistFile) Error(err error) string {
 	if err != nil {
 		log.Fatalf("FilePath Error Description -> %v ,FileName: %v , FilePath: %v", f.ErrorDescription, f.Name, f.Path)
 	}
@@ -38,7 +38,7 @@ func DoesNotCreateBill(err error) string {
 	return nil
 }
 
-//Veritabanına bağlantı
+//DB bağlantı hatası
 func DbConnectionError(err error) string {
 	if err != nil {
 		fmt.Printf("%v", "Veritabanına bağlanılamadı!")
