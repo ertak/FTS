@@ -15,7 +15,7 @@ type NotExistFile struct {
 	Name             string
 }
 
-func (f *NotExistFile) Error(err error) string {
+func (f *NotExistFile) Error(err error) error {
 	if err != nil {
 		log.Fatalf("FilePath Error Description -> %v ,FileName: %v , FilePath: %v", f.ErrorDescription, f.Name, f.Path)
 	}
@@ -23,7 +23,7 @@ func (f *NotExistFile) Error(err error) string {
 }
 
 //Sistem durması!
-func SystemExit(err error) string {
+func SystemExit(err error) error {
 	if err != nil {
 		log.Panicf("%v \n %v", "Program beklenmedik şekilde durdu!", time.Now())
 	}
@@ -31,7 +31,7 @@ func SystemExit(err error) string {
 }
 
 //Fatura oluşturma
-func DoesNotCreateBill(err error) string {
+func DoesNotCreateBill(err error) error {
 	if err != nil {
 		fmt.Printf("%v", "Fatura oluşturulurken hata oluştu!")
 	}
@@ -39,7 +39,7 @@ func DoesNotCreateBill(err error) string {
 }
 
 //DB bağlantı hatası
-func DbConnectionError(err error) string {
+func DbConnectionError(err error) error {
 	if err != nil {
 		fmt.Printf("%v", "Veritabanına bağlanılamadı!")
 	}
@@ -47,14 +47,14 @@ func DbConnectionError(err error) string {
 }
 
 //Fatura Silinmesi
-func DeleteBillError(err error) string {
+func DeleteBillError(err error) error {
 	if err != nil {
 		log.Panicf("%v", "Fatura silinirken bir hata oluştu!")
 	}
 	return nil
 }
 
-func WriteJsonFile(err error) string {
+func WriteJsonFile(err error) error {
 	if err != nil {
 		log.Panicf("%v", "Json dosyasına yazılırken bir hata oluştu!")
 	}
