@@ -53,3 +53,10 @@ func DeleteBillError(err error) string {
 	}
 	return nil
 }
+
+func WriteJsonFile(err error) string {
+	if err != nil {
+		log.Panicf("%v", "Json dosyasına yazılırken bir hata oluştu!")
+	}
+	return nil
+}

@@ -1,1 +1,7 @@
 package FTS
+
+func main() {
+
+
+
+}
