@@ -12,7 +12,7 @@ import
 
 func Add_Bill()  {
 
-	file, e := ioutil.ReadFile("../data/Account.json")
+	file, e := ioutil.ReadFile("data/Account.json")
 	if e != nil {
 		fmt.Printf("File error: %v\n", e)
 		os.Exit(1)
@@ -35,9 +35,9 @@ func Add_Bill()  {
 		customer.Account.Bills.Other = append(customer.Account.Bills.Other,bill)
 	}
 
-	billjs,err:= json.Marshal(customer)
+	billjs,err:= json.MarshalIndent(customer,""," ")
 	Error.WriteJsonFile(err)
 	fmt.Println(string(billjs))
 
-	ioutil.WriteFile("../data/Account.json",billjs,0644)
+	ioutil.WriteFile("data/Account.json",billjs,0644)
 }
