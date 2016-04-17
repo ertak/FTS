@@ -1,16 +1,16 @@
 package Bill_Operation
-import
-(
+
+import (
+	"FTS/Error"
+	"FTS/Screen_Question"
+	"FTS/model"
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
 	"os"
-	"FTS/Error"
-	"FTS/model"
-	"FTS/Screen_Question"
 )
 
-func Add_Bill()  {
+func Add_Bill() {
 
 	file, e := ioutil.ReadFile("data/Account.json")
 	if e != nil {
@@ -20,24 +20,30 @@ func Add_Bill()  {
 	var customer Model.User
 	json.Unmarshal(file, &customer)
 
-	bill := Model.Bill{Month:Screen_Question.BillMonth,Amount:Screen_Question.BillAmount,DeadLine:Screen_Question.BillDate,Description:Screen_Question.BillDesc,SystemInfo:Model.Info{CreateTime:"10.11.12"}}
+	bill := Model.Bill{
+		Month:       Screen_Question.BillMonth,
+		Amount:      Screen_Question.BillAmount,
+		DeadLine:    Screen_Question.BillDate,
+		Description: Screen_Question.BillDesc,
+		SystemInfo:  Model.Info{CreateTime: "10.11.12"},
+	}
 
 	switch Screen_Question.Billtype {
 	case 1:
-		customer.Account.Bills.Electricity = append(customer.Account.Bills.Electricity,bill)
+		customer.Account.Bills.Electricity = append(customer.Account.Bills.Electricity, bill)
 	case 2:
-		customer.Account.Bills.Gas = append(customer.Account.Bills.Gas,bill)
+		customer.Account.Bills.Gas = append(customer.Account.Bills.Gas, bill)
 	case 3:
-		customer.Account.Bills.Water = append(customer.Account.Bills.Water,bill)
+		customer.Account.Bills.Water = append(customer.Account.Bills.Water, bill)
 	case 4:
-		customer.Account.Bills.Phone = append(customer.Account.Bills.Phone,bill)
+		customer.Account.Bills.Phone = append(customer.Account.Bills.Phone, bill)
 	case 5:
-		customer.Account.Bills.Other = append(customer.Account.Bills.Other,bill)
+		customer.Account.Bills.Other = append(customer.Account.Bills.Other, bill)
 	}
 
-	billjs,err:= json.MarshalIndent(customer,""," ")
+	billjs, err := json.MarshalIndent(customer, "", " ")
 	Error.WriteJsonFile(err)
 	fmt.Println(string(billjs))
 
-	ioutil.WriteFile("data/Account.json",billjs,0644)
+	ioutil.WriteFile("data/Account.json", billjs, 0644)
 }
