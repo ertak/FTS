@@ -3,6 +3,7 @@ package Bill_Operation
 import (
 	"FTS/Error"
 	"FTS/Screen_Question"
+	"FTS/System_Info"
 	"FTS/model"
 	"encoding/json"
 	"fmt"
@@ -25,7 +26,7 @@ func Add_Bill() {
 		Amount:      Screen_Question.BillAmount,
 		DeadLine:    Screen_Question.BillDate,
 		Description: Screen_Question.BillDesc,
-		SystemInfo:  Model.Info{CreateTime: "10.11.12"},
+		SystemInfo:  System.Info{CreateDate: System.Date(), CreateTime: System.Time(), CreateIP: System.IPControl()},
 	}
 
 	switch Screen_Question.Billtype {

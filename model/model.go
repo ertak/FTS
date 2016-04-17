@@ -1,5 +1,7 @@
 package Model
 
+import "FTS/System_Info"
+
 type User struct { // Her kullanıcı genel bir fatura hesabna sahiptir.
 	Account UserAccount `json:"Account"`
 }
@@ -13,13 +15,9 @@ type BillType struct { //Çeşitli fatura mevcuttur.
 }
 
 type Bill struct { //Fatura Bilgisi
-	Month       string `json:"Month"`
-	Amount      int    `json:"Amount"`
-	DeadLine    string `json:"DeadLine"`
-	Description string `json:"Description"`
-	SystemInfo  Info   `json:"System_Info"`
-}
-
-type Info struct { //Sistem Bilgisi
-	CreateTime string
+	Month       string      `json:"Month"`
+	Amount      int         `json:"Amount"`
+	DeadLine    string      `json:"DeadLine"`
+	Description string      `json:"Description"`
+	SystemInfo  System.Info `json:"System_Info"` //Sisteme ait olan otomatik bilgidir.ew
 }
