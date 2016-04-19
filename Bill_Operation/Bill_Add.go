@@ -11,6 +11,7 @@ import (
 	"os"
 )
 
+var Customer Model.User
 func Add_Bill() {
 
 	file, e := ioutil.ReadFile("data/Account.json")
@@ -18,8 +19,8 @@ func Add_Bill() {
 		fmt.Printf("File error: %v\n", e)
 		os.Exit(1)
 	}
-	var customer Model.User
-	json.Unmarshal(file, &customer)
+
+	json.Unmarshal(file, &Customer)
 
 	bill := Model.Bill{
 		Month:       Screen_Question.BillMonth,
@@ -29,22 +30,23 @@ func Add_Bill() {
 		SystemInfo:  System.Info{CreateDate: System.Date(), CreateTime: System.Time(), CreateIP: System.IPControl()},
 	}
 
+	//Error kontrolü yapılmalı bu döneme ait fatura zaten oluşturuldu gibi!!!
 	switch Screen_Question.Billtype {
 	case 1:
-		customer.Account.Bills.Electricity = append(customer.Account.Bills.Electricity, bill)
+		Customer.Account.Bills.Electricity = append(Customer.Account.Bills.Electricity, bill)
 	case 2:
-		customer.Account.Bills.Gas = append(customer.Account.Bills.Gas, bill)
+		Customer.Account.Bills.Gas = append(Customer.Account.Bills.Gas, bill)
 	case 3:
-		customer.Account.Bills.Water = append(customer.Account.Bills.Water, bill)
+		Customer.Account.Bills.Water = append(Customer.Account.Bills.Water, bill)
 	case 4:
-		customer.Account.Bills.Phone = append(customer.Account.Bills.Phone, bill)
+		Customer.Account.Bills.Phone = append(Customer.Account.Bills.Phone, bill)
 	case 5:
-		customer.Account.Bills.Other = append(customer.Account.Bills.Other, bill)
+		Customer.Account.Bills.Other = append(Customer.Account.Bills.Other, bill)
 	}
 
-	billjs, err := json.MarshalIndent(customer, "", " ")
+	billaddjs, err := json.MarshalIndent(Customer, "", " ")
 	Error.WriteJsonFile(err)
-	fmt.Println(string(billjs))
+	fmt.Println(string(billaddjs))
 
-	ioutil.WriteFile("data/Account.json", billjs, 0644)
+	ioutil.WriteFile("data/Account.json", billaddjs, 0644)
 }

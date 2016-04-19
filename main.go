@@ -8,7 +8,12 @@ import (
 func main() {
 
 	Screen_Question.Question()
-	Bill_Operation.Add_Bill()
+	if Screen_Question.Bill_opr_selected == 1 {
+		Bill_Operation.Add_Bill()
+	}else {
+		Bill_Operation.Delete_Bill()
+	}
+
 
 }
 

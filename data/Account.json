@@ -1,13 +1,36 @@
 {
  "Account": {
-  "Username": "ugur",
-  "Password": 1234,
+  "Username": "",
+  "Password": 0,
   "Bills": {
    "Electricity": [],
-   "Water": [],
-   "Gas": [],
-   "Phone": [],
-   "Other": []
+   "Water": null,
+   "Gas": [
+    {
+     "Month": "eylul",
+     "Amount": 0,
+     "DeadLine": "",
+     "Description": "a",
+     "System_Info": {
+      "CreateDate": "19.04.2016",
+      "CreateTime": "13:37:22",
+      "CreateIP": "10.75.2.215"
+     }
+    },
+    {
+     "Month": "kas�m",
+     "Amount": 23,
+     "DeadLine": "23",
+     "Description": "22",
+     "System_Info": {
+      "CreateDate": "19.04.2016",
+      "CreateTime": "13:38:24",
+      "CreateIP": "10.75.2.215"
+     }
+    }
+   ],
+   "Phone": null,
+   "Other": null
   }
  }
 }

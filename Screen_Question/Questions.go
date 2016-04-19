@@ -1,9 +1,12 @@
 package Screen_Question
 
-import "fmt"
+import (
+	"fmt"
+	"FTS/Error"
+)
 
 var (
-	Billtype, BillAmount          int
+	Billtype, BillAmount,Bill_opr_selected          int
 	BillMonth, BillDate, BillDesc string
 )
 
@@ -14,8 +17,12 @@ func Question() {
 	f("Fatura Ekleme (1)")
 	f("Fatura Silme (2)")
 
-	var bill_opr_selected int
-	fmt.Scanf("%d\n", &bill_opr_selected)
+	fmt.Scanf("%d\n", &Bill_opr_selected)
+
+	//--- Error fırlatılacak ve program durdurulacak!!!
+	if Bill_opr_selected != 1 && Bill_opr_selected != 2 {
+		fmt.Println("Lütfen geçerli bir işlem durumu giriniz!")
+	}
 
 	f("İşlem Yapmak İstediğiniz Fatura İşlemini Seçiniz?")
 	f("Elektrik Faturası	: (1)")
@@ -26,9 +33,9 @@ func Question() {
 
 	fmt.Scanf("%d\n", &Billtype)
 
-	if bill_opr_selected == 1 {
+	if Bill_opr_selected == 1 {
 
-		fmt.Println("Fatura Ayı:")
+		fmt.Println("Fatura Dönemi:")
 		fmt.Scanf("%s\n", &BillMonth)
 
 		f("Tutar:")
@@ -44,5 +51,7 @@ func Question() {
 		//Sildirme durumunda tüm bilgiler alınmayacak..
 		f("Fatura Ayı:")
 		fmt.Scanf("%s\n", &BillMonth)
+
+
 	}
 }
