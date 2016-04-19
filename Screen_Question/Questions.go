@@ -2,7 +2,9 @@ package Screen_Question
 
 import (
 	"fmt"
-	"FTS/Error"
+	"errors"
+	"log"
+	"os"
 )
 
 var (
@@ -21,7 +23,9 @@ func Question() {
 
 	//--- Error fırlatılacak ve program durdurulacak!!!
 	if Bill_opr_selected != 1 && Bill_opr_selected != 2 {
-		fmt.Println("Lütfen geçerli bir işlem durumu giriniz!")
+		err := errors.New("Lütfen işlem numaranızı kontrol ediniz!")
+		log.Fatal(err)
+		os.Exit(Bill_opr_selected)
 	}
 
 	f("İşlem Yapmak İstediğiniz Fatura İşlemini Seçiniz?")
