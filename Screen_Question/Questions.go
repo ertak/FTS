@@ -2,14 +2,11 @@ package Screen_Question
 
 import (
 	"fmt"
-	"errors"
-	"log"
-	"os"
 )
 
 var (
 	Billtype, BillAmount,Bill_opr_selected          int
-	BillMonth, BillDate, BillDesc string
+	BillMonth, BillDate, BillDesc 					string
 )
 
 func Question() {
@@ -21,12 +18,11 @@ func Question() {
 
 	fmt.Scanf("%d\n", &Bill_opr_selected)
 
-	//--- Error fırlatılacak ve program durdurulacak!!!
-	if Bill_opr_selected != 1 && Bill_opr_selected != 2 {
-		err := errors.New("Lütfen işlem numaranızı kontrol ediniz!")
-		log.Fatal(err)
-		os.Exit(Bill_opr_selected)
+	for Bill_opr_selected !=1 && Bill_opr_selected !=2  {
+		fmt.Println("Lütfen geçerli bir işlem numarası giriniz!")
+		fmt.Scanf("%d\n", &Bill_opr_selected)
 	}
+
 
 	f("İşlem Yapmak İstediğiniz Fatura İşlemini Seçiniz?")
 	f("Elektrik Faturası	: (1)")
@@ -39,7 +35,7 @@ func Question() {
 
 	if Bill_opr_selected == 1 {
 
-		fmt.Println("Fatura Dönemi:")
+		f("Fatura Dönemi:")
 		fmt.Scanf("%s\n", &BillMonth)
 
 		f("Tutar:")

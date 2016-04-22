@@ -9,10 +9,13 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
+	"errors"
 )
 
 var Customer Model.User
+
 func Add_Bill() {
+	err := errors.New("Belirtilen döneme ait fatura zaten eklenmiştir!")
 
 	file, e := ioutil.ReadFile("data/Account.json")
 	if e != nil {
@@ -33,6 +36,7 @@ func Add_Bill() {
 	//Error kontrolü yapılmalı bu döneme ait fatura zaten oluşturuldu gibi!!!
 	switch Screen_Question.Billtype {
 	case 1:
+		//Eklenşirken aynı döneme ait 2. fatura ekleme kontrolü yapılacak
 		Customer.Account.Bills.Electricity = append(Customer.Account.Bills.Electricity, bill)
 	case 2:
 		Customer.Account.Bills.Gas = append(Customer.Account.Bills.Gas, bill)
