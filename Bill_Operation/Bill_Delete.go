@@ -21,16 +21,15 @@ func Delete_Bill()  {
 
 	json.Unmarshal(file, &Customer)
 
-	//Error kontrolü yapılması lazım -- Belirtilen dönemin faturası bulunamadı gibi..!
+	//Error kontrolü yapıldı o dönemin faturası olmadığında hata veriyor fakat kullanıcıya tekrardan hak tanınması da yapılabilinir daha sonra!
 	err := errors.New("Belirtilen döneme ait fatura bulunamadı!")
 	switch Screen_Question.Billtype {
 	case 1:
 		for i,value := range Customer.Account.Bills.Electricity{
-			if  Screen_Question.BillMonth== value.Month {
+			if  Screen_Question.BillMonth == value.Month {
 				Customer.Account.Bills.Electricity = append(Customer.Account.Bills.Electricity[:i], Customer.Account.Bills.Electricity[i+1:]...)
 			}else {
 				fmt.Println(err)
-				Screen_Question.Question()
 			}
 		}
 	case 2:
@@ -39,7 +38,6 @@ func Delete_Bill()  {
 				Customer.Account.Bills.Gas = append(Customer.Account.Bills.Gas[:i], Customer.Account.Bills.Gas[i+1:]...)
 			}else {
 				fmt.Println(err)
-				Screen_Question.Question()
 			}
 		}
 	case 3:
@@ -48,7 +46,6 @@ func Delete_Bill()  {
 				Customer.Account.Bills.Water = append(Customer.Account.Bills.Water[:i], Customer.Account.Bills.Water[i+1:]...)
 			}else {
 				fmt.Println(err)
-				Screen_Question.Question()
 			}
 		}
 
@@ -58,7 +55,6 @@ func Delete_Bill()  {
 				Customer.Account.Bills.Phone = append(Customer.Account.Bills.Phone[:i], Customer.Account.Bills.Phone[i+1:]...)
 			}else {
 				fmt.Println(err)
-				Screen_Question.Question()
 			}
 		}
 	case 5:
@@ -67,7 +63,6 @@ func Delete_Bill()  {
 				Customer.Account.Bills.Other = append(Customer.Account.Bills.Other[:i], Customer.Account.Bills.Other[i+1:]...)
 			}else {
 				fmt.Println(err)
-				Screen_Question.Question()
 			}
 
 		}

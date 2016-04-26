@@ -5,94 +5,6 @@
   "Bills": {
    "Electricity": [
     {
-     "Month": "a",
-     "Amount": 1,
-     "DeadLine": "1",
-     "Description": "1",
-     "System_Info": {
-      "CreateDate": "22.04.2016",
-      "CreateTime": "10:19:08",
-      "CreateIP": "10.75.2.215"
-     }
-    },
-    {
-     "Month": "r",
-     "Amount": 2,
-     "DeadLine": "2",
-     "Description": "2",
-     "System_Info": {
-      "CreateDate": "22.04.2016",
-      "CreateTime": "11:05:10",
-      "CreateIP": "10.75.2.215"
-     }
-    },
-    {
-     "Month": "t",
-     "Amount": 0,
-     "DeadLine": "",
-     "Description": "t",
-     "System_Info": {
-      "CreateDate": "22.04.2016",
-      "CreateTime": "11:07:32",
-      "CreateIP": "10.75.2.215"
-     }
-    },
-    {
-     "Month": "t",
-     "Amount": 0,
-     "DeadLine": "",
-     "Description": "t",
-     "System_Info": {
-      "CreateDate": "22.04.2016",
-      "CreateTime": "11:07:32",
-      "CreateIP": "10.75.2.215"
-     }
-    },
-    {
-     "Month": "t",
-     "Amount": 2,
-     "DeadLine": "2",
-     "Description": "2",
-     "System_Info": {
-      "CreateDate": "22.04.2016",
-      "CreateTime": "11:10:23",
-      "CreateIP": "10.75.2.215"
-     }
-    },
-    {
-     "Month": "t",
-     "Amount": 2,
-     "DeadLine": "2",
-     "Description": "2",
-     "System_Info": {
-      "CreateDate": "22.04.2016",
-      "CreateTime": "11:10:23",
-      "CreateIP": "10.75.2.215"
-     }
-    },
-    {
-     "Month": "t",
-     "Amount": 2,
-     "DeadLine": "2",
-     "Description": "2",
-     "System_Info": {
-      "CreateDate": "22.04.2016",
-      "CreateTime": "11:10:23",
-      "CreateIP": "10.75.2.215"
-     }
-    },
-    {
-     "Month": "t",
-     "Amount": 2,
-     "DeadLine": "2",
-     "Description": "2",
-     "System_Info": {
-      "CreateDate": "22.04.2016",
-      "CreateTime": "11:10:23",
-      "CreateIP": "10.75.2.215"
-     }
-    },
-    {
      "Month": "w",
      "Amount": 2,
      "DeadLine": "2",
@@ -153,30 +65,7 @@
     }
    ],
    "Phone": null,
-   "Other": [
-    {
-     "Month": "Eylül",
-     "Amount": 1,
-     "DeadLine": "1",
-     "Description": "1",
-     "System_Info": {
-      "CreateDate": "21.04.2016",
-      "CreateTime": "11:38:12",
-      "CreateIP": "10.75.2.215"
-     }
-    },
-    {
-     "Month": "a",
-     "Amount": 1,
-     "DeadLine": "1",
-     "Description": "1",
-     "System_Info": {
-      "CreateDate": "22.04.2016",
-      "CreateTime": "10:19:08",
-      "CreateIP": "10.75.2.215"
-     }
-    }
-   ]
+   "Other": []
   }
  }
 }
