@@ -10,7 +10,7 @@
 
 *HTTP tabanlýdýr.
 *Bütün REST requestleri birer HTTP requesttir aslýnda ve serverlar bu istekleri farklý metodlarla handle etmektedir.
-*HTTP gönderilir cevap olarak XML alýnýr.
+*HTTP gönderilir cevap olarak XML,Json hatta text alýnýr.
 *Kullanýmýd daha rahat flexible'dýr.
 
 --SOAP?(Simple Object Access Protocol)
