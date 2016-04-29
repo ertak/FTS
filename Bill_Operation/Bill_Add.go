@@ -15,7 +15,6 @@ import (
 var Customer Model.User
 
 func Add_Bill() {
-	err := errors.New("Belirtilen döneme ait fatura zaten eklenmiştir!")
 
 	file, e := ioutil.ReadFile("data/Account.json")
 	if e != nil {
