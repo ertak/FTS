@@ -1,4 +1,4 @@
---Web Service nedir ne deðildir? 
+--Web Service nedir? 
 
 *Request alýr kendi içinde deðerlendirir ve geriye cevap döner genel yapýsý ve iþleyiþi budur.
 *HTTP üzerinden xml veya json ile data alýþveriþi saðlar.
