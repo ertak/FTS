@@ -5,108 +5,96 @@
   "Bills": {
    "Electricity": [
     {
-     "Month": "w",
-     "Amount": 2,
-     "DeadLine": "2",
-     "Description": "2",
-     "System_Info": {
-      "CreateDate": "22.04.2016",
-      "CreateTime": "11:15:24",
-      "CreateIP": "10.75.2.215"
-     }
-    },
-    {
-     "Month": "a",
-     "Amount": 1,
-     "DeadLine": "1",
+     "Month": "Mart",
+     "Amount": "1",
+     "DeadLine": "2016-05-30",
      "Description": "1",
      "System_Info": {
-      "CreateDate": "22.04.2016",
-      "CreateTime": "17:10:45",
+      "CreateDate": "05.05.2016",
+      "CreateTime": "11:07:18",
       "CreateIP": "10.75.2.215"
      }
     },
     {
-     "Month": "a",
-     "Amount": 10,
-     "DeadLine": "11",
-     "Description": "e",
+     "Month": "Ocak",
+     "Amount": "34",
+     "DeadLine": "2016-05-18",
+     "Description": "34",
      "System_Info": {
-      "CreateDate": "29.04.2016",
-      "CreateTime": "17:15:34",
-      "CreateIP": "10.75.2.215"
-     }
-    },
-    {
-     "Month": "r",
-     "Amount": 3,
-     "DeadLine": "3",
-     "Description": "3",
-     "System_Info": {
-      "CreateDate": "29.04.2016",
-      "CreateTime": "17:25:10",
-      "CreateIP": "10.75.2.215"
-     }
-    },
-    {
-     "Month": "r",
-     "Amount": 3,
-     "DeadLine": "3",
-     "Description": "3",
-     "System_Info": {
-      "CreateDate": "29.04.2016",
-      "CreateTime": "17:25:10",
-      "CreateIP": "10.75.2.215"
-     }
-    },
-    {
-     "Month": "r",
-     "Amount": 3,
-     "DeadLine": "3",
-     "Description": "3",
-     "System_Info": {
-      "CreateDate": "29.04.2016",
-      "CreateTime": "17:25:10",
+      "CreateDate": "05.05.2016",
+      "CreateTime": "11:08:54",
       "CreateIP": "10.75.2.215"
      }
     }
    ],
-   "Water": [
+   "Water": null,
+   "Gas": null,
+   "Phone": [
     {
-     "Month": "e",
-     "Amount": 10,
-     "DeadLine": "1",
-     "Description": "1",
+     "Month": "Mayıs",
+     "Amount": "120",
+     "DeadLine": "2016-06-03",
+     "Description": "yok",
      "System_Info": {
-      "CreateDate": "22.04.2016",
-      "CreateTime": "10:19:28",
+      "CreateDate": "05.05.2016",
+      "CreateTime": "11:15:09",
       "CreateIP": "10.75.2.215"
      }
     }
    ],
-   "Gas": [
-    {
-     "Month": "a",
-     "Amount": 1,
-     "DeadLine": "1",
-     "Description": "1",
-     "System_Info": {
-      "CreateDate": "22.04.2016",
-      "CreateTime": "10:40:49",
-      "CreateIP": "10.75.2.215"
-     }
-    }
-   ],
-   "Phone": null,
    "Other": [
     {
-     "Month": "a",
-     "Amount": 2,
-     "DeadLine": "2",
-     "Description": "2",
+     "Month": "Ocak",
+     "Amount": "555",
+     "DeadLine": "2016-05-11",
+     "Description": "yer",
      "System_Info": {
-      "CreateDate": "26.04.2016",
-      "CreateTime": "17:51:16",
+      "CreateDate": "05.05.2016",
+      "CreateTime": "11:19:00",
+      "CreateIP": "10.75.2.215"
+     }
+    },
+    {
+     "Month": "Temmuz",
+     "Amount": "444",
+     "DeadLine": "2016-05-19",
+     "Description": "ert",
+     "System_Info": {
+      "CreateDate": "05.05.2016",
+      "CreateTime": "13:32:48",
+      "CreateIP": "10.75.2.215"
+     }
+    },
+    {
+     "Month": "Kasım",
+     "Amount": "",
+     "DeadLine": "",
+     "Description": "",
+     "System_Info": {
+      "CreateDate": "05.05.2016",
+      "CreateTime": "13:54:39",
+      "CreateIP": "10.75.2.215"
+     }
+    },
+    {
+     "Month": "Ağustos",
+     "Amount": "",
+     "DeadLine": "",
+     "Description": "",
+     "System_Info": {
+      "CreateDate": "05.05.2016",
+      "CreateTime": "13:56:20",
+      "CreateIP": "10.75.2.215"
+     }
+    },
+    {
+     "Month": "Ekim",
+     "Amount": "",
+     "DeadLine": "",
+     "Description": "",
+     "System_Info": {
+      "CreateDate": "05.05.2016",
+      "CreateTime": "13:56:38",
       "CreateIP": "10.75.2.215"
      }
     }

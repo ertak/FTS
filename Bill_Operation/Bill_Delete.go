@@ -7,11 +7,18 @@ import (
 	"FTS/Screen_Question"
 	"errors"
 	"FTS/Error"
+"net/http"
 )
 
 
-func Delete_Bill()  {
+func Delete_Bill(w http.ResponseWriter, r *http.Request)  {
 
+	f := fmt.Println
+	frm_billtype := r.FormValue("BillTypeSelect")
+	frm_ay := r.FormValue("dropdown_ay")
+
+	f("Fatura Tipi:", frm_billtype)
+	f("Fatura Kesim Ayı:", frm_ay)
 
 	file, e := ioutil.ReadFile("data/Account.json")
 	if e != nil {

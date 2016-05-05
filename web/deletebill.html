@@ -7,29 +7,29 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>FTS</title>
+	<title>FTS Sil</title>
 
-	<link rel="stylesheet" href="../css/index.css">
+	<link rel="stylesheet" href="/css/index.css">
 
 </head>
-
+<body>
 
     <div class="main-content">
 
         <!-- You only need this form and the form-labels-on-top.css -->
 
-        <form class="form-labels-on-top" method="post" action="#">
+        <form class="form-labels-on-top" method="POST" action="/login">
 
             <div class="form-title-row">
                 <h1>FTS</h1>
             </div>
-			
+
 			<div class="form-row">
                 <label>
                     <span>Fatura Tipi</span>
                  <select name="BillTypeSelect">
 					<option value="Elektrik" name="elektrik">Elektrik</option>
-					<option value="Dogalgaz" name="dogalgaz">Doğalgaz</option>
+					<option value="Doğalgaz" name="dogalgaz">Doğalgaz</option>
 					<option value="Su" name="su">Su</option>
 					<option value="Telefon" name="telefon">Telefon</option>
 					<option value="Diğer" name="diger">Diğer</option>
@@ -38,19 +38,6 @@
                 </label>
             </div>
 
-            <div class="form-row">
-                <label>
-                    <span>Son Ödeme Tarihi</span>
-					<input type="date" name="drp_sonodeme"/>
-                </label>
-            </div>
-
-            <div class="form-row">
-                <label>
-                    <span>Tutar</span>
-                    <input type="text" name="txt_tutar">
-                </label>
-            </div>
 
             <div class="form-row">
                 <label>
@@ -73,7 +60,7 @@
             </div>
 
             <div class="form-row">
-                <button type="submit" name="btn_fatura">Fatura Oluştur!</button>
+                <button type="submit" name="btn_fatura">Fatura Sil!</button>
             </div>
 
         </form>

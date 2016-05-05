@@ -2,18 +2,20 @@ package main
 
 import (
 	"FTS/Bill_Operation"
-	"FTS/Screen_Question"
+	"log"
+	"net/http"
+
 )
 
-func main() {
+func main(){
 
-	Screen_Question.Question()
-	if Screen_Question.Bill_opr_selected == 1 {
-		Bill_Operation.Add_Bill()
-	}else {
-		Bill_Operation.Delete_Bill()
+	http.Handle("/",http.FileServer(http.Dir("./web")))
+	http.HandleFunc("/addbill", Bill_Operation.Add_Bill)
+	http.HandleFunc("/delbill", Bill_Operation.Delete_Bill())
+	err := http.ListenAndServe(":8080",nil)
+	if err != nil {
+		log.Fatal("ListenAndServe" ,err)
 	}
-
 
 }
 

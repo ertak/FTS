@@ -16,7 +16,7 @@ type BillType struct { //Çeşitli fatura mevcuttur.
 
 type Bill struct { //Fatura Bilgisi
 	Month       string      `json:"Month"`
-	Amount      int         `json:"Amount"`
+	Amount      string      `json:"Amount"`
 	DeadLine    string      `json:"DeadLine"`
 	Description string      `json:"Description"`
 	SystemInfo  System.Info `json:"System_Info"` //Sisteme ait olan otomatik bilgidir.ew
