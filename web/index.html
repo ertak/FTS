@@ -20,7 +20,7 @@
     <div class="main-content">
 
 
-        <form class="form-labels-on-top" >
+        <form class="form-labels-on-top"  action="#">
 
             <div class="form-title-row">
                 <h1>FTS</h1>
@@ -28,14 +28,14 @@
 			<table  align="center">
 			<tr>
 				<td>
-					<div class="form-row" action="./addbill.html	"> 
-						<button type="submit">Fatura Ekle!</button>
+					<div class="form-row" action="./addbill.html"> 
+						<button type="submit" formmethod="post" formaction="./addbill.html">Fatura Ekle</button>
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					</div>
 				</td>
 				<td>
-					<div class="form-row" action="./dellbill.html	"> 
-						<button type="submit" name="btn_ftrsil">Fatura Sil!</button>
+					<div class="form-row"> 
+						<button type="submit" formmethod="post" formaction="./delbill.html">Fatura Sil</button>
 					</div>
 				</td>
 				</tr>
