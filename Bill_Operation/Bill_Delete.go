@@ -4,10 +4,9 @@ import (
 	"fmt"
 	"os"
 	"encoding/json"
-	"FTS/Screen_Question"
 	"errors"
 	"FTS/Error"
-"net/http"
+	"net/http"
 )
 
 
@@ -28,57 +27,63 @@ func Delete_Bill(w http.ResponseWriter, r *http.Request)  {
 
 	json.Unmarshal(file, &Customer)
 
-	//Error kontrolü yapıldı o dönemin faturası olmadığında hata veriyor fakat kullanıcıya tekrardan hak tanınması da yapılabilinir daha sonra!
-	err := errors.New("Belirtilen döneme ait fatura bulunamadı!")
-	switch Screen_Question.Billtype {
-	case 1:
+	errValueDelete := errors.New("Belirtilen döneme ait fatura bulunamadı!")
+	switch frm_billtype {
+	case "Elektrik":
 		for i,value := range Customer.Account.Bills.Electricity{
-			if  Screen_Question.BillMonth == value.Month {
+			if  frm_ay == value.Month {
 				Customer.Account.Bills.Electricity = append(Customer.Account.Bills.Electricity[:i], Customer.Account.Bills.Electricity[i+1:]...)
 			}else {
-				fmt.Println(err)
+				fmt.Fprintln(w,errValueDelete)
 			}
 		}
-	case 2:
+	case "Doğalgaz":
 		for i,value := range Customer.Account.Bills.Gas{
-			if  Screen_Question.BillMonth== value.Month {
+			if  frm_ay == value.Month {
 				Customer.Account.Bills.Gas = append(Customer.Account.Bills.Gas[:i], Customer.Account.Bills.Gas[i+1:]...)
 			}else {
-				fmt.Println(err)
+				fmt.Fprintln(w,errValueDelete)
 			}
 		}
-	case 3:
-		for i,value := range Customer.Account.Bills.Water{
-			if  Screen_Question.BillMonth== value.Month {
-				Customer.Account.Bills.Water = append(Customer.Account.Bills.Water[:i], Customer.Account.Bills.Water[i+1:]...)
+	case "Su":
+		for i,value := range Customer.Account.Bills.Water {
+			if frm_ay == value.Month {
+				Customer.Account.Bills.Water = append(Customer.Account.Bills.Water[:i], Customer.Account.Bills.Water[i + 1:]...)
 			}else {
-				fmt.Println(err)
+				fmt.Fprintln(w, errValueDelete)
 			}
 		}
 
-	case 4:
+	case "Telefon":
 		for i,value := range Customer.Account.Bills.Phone{
-			if  Screen_Question.BillMonth== value.Month {
+			if  frm_ay == value.Month {
 				Customer.Account.Bills.Phone = append(Customer.Account.Bills.Phone[:i], Customer.Account.Bills.Phone[i+1:]...)
 			}else {
-				fmt.Println(err)
+				fmt.Fprintln(w,errValueDelete)
 			}
 		}
-	case 5:
+	case "Diğer":
 		for i,value := range Customer.Account.Bills.Other{
-			if  Screen_Question.BillMonth == value.Month {
+			if  frm_ay == value.Month {
 				Customer.Account.Bills.Other = append(Customer.Account.Bills.Other[:i], Customer.Account.Bills.Other[i+1:]...)
 			}else {
-				fmt.Println(err)
+				fmt.Fprintln(w,errValueDelete)
 			}
 
 		}
 	}
 
+		billdeljs, err := json.MarshalIndent(Customer, "", " ")
+		Error.WriteJsonFile(err)
+		fmt.Println(string(billdeljs))
 
-	billdeljs, err := json.MarshalIndent(Customer, "", " ")
-	Error.WriteJsonFile(err)
-	fmt.Println(string(billdeljs))
+		ioutil.WriteFile("data/Account.json", billdeljs, 0644)
 
-	ioutil.WriteFile("data/Account.json", billdeljs, 0644)
+		if err != nil {
+			http.Error(w,err.Error(),http.StatusInternalServerError)
+			return
+		}
+
+		w.Header().Set("Content-Type","application/json")
+		w.Write(billdeljs)
 }

@@ -47,9 +47,9 @@ func Add_Bill(w http.ResponseWriter, r *http.Request) {
 			SystemInfo:  System.Info{CreateDate: System.Date(), CreateTime: System.Time(), CreateIP: System.IPControl()},
 		}
 
-		//Fakat Error verdikten sonra kullanıcıya tekrardan giriş için hak tanınmadı direk uyarı verip program sonlandırıldı!!!!
 		errValueAdd := errors.New("Aynı döneme ait fatura sistemde eklidir!")
 		switch frm_billtype {
+
 		case "Elektrik":
 			counter1 := 0
 			for _, valueAdd := range Customer.Account.Bills.Electricity {
@@ -99,7 +99,7 @@ func Add_Bill(w http.ResponseWriter, r *http.Request) {
 				if frm_ay == valueAdd.Month {
 					counter4++
 					if counter4 > 0 {
-						fmt.Println(errValueAdd)
+						fmt.Fprintln(w,errValueAdd)
 						os.Exit(3)
 					}
 				}
@@ -119,26 +119,27 @@ func Add_Bill(w http.ResponseWriter, r *http.Request) {
 			}
 			if counter5 == 0 {
 				Customer.Account.Bills.Other = append(Customer.Account.Bills.Other, bill)
-				billaddjs, err := json.MarshalIndent(Customer, "", " ")
-				Error.WriteJsonFile(err)
-				//fmt.Println(string(billaddjs))
 
-				ioutil.WriteFile("data/Account.json", billaddjs, 0644)
-
-
-				if err != nil {
-					http.Error(w,err.Error(),http.StatusInternalServerError)
-					return
-				}
-
-				w.Header().Set("Content-Type","application/json")
-				w.Write(billaddjs)
 			}
 		}
 
+		billaddjs, err := json.MarshalIndent(Customer, "", " ")
+		Error.WriteJsonFile(err)
+		//fmt.Println(string(billaddjs))
+
+		ioutil.WriteFile("data/Account.json", billaddjs, 0644)
 
 
+		if err != nil {
+			http.Error(w,err.Error(),http.StatusInternalServerError)
+			return
+		}
+
+		w.Header().Set("Content-Type","application/json")
+		w.Write(billaddjs)
 
 
 	}
+
+
 
