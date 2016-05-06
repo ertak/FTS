@@ -7,9 +7,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>FTS Sil</title>
+	<title>FTS</title>
 
-	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="/css/index.css">
 
 </head>
 <body>
@@ -18,7 +18,7 @@
 
         <!-- You only need this form and the form-labels-on-top.css -->
 
-        <form class="form-labels-on-top" method="POST" action="/delbill">
+        <form class="form-labels-on-top" method="POST" action="/showbill2">
 
             <div class="form-title-row">
                 <h1>FTS</h1>
@@ -27,7 +27,7 @@
 			<div class="form-row">
                 <label>
                     <span>Fatura Tipi</span>
-                 <select name="BillTypeSelect">
+                 <select name="ShowBillType2">
 					<option value="Elektrik" name="elektrik">Elektrik</option>
 					<option value="Doğalgaz" name="dogalgaz">Doğalgaz</option>
 					<option value="Su" name="su">Su</option>
@@ -38,11 +38,24 @@
                 </label>
             </div>
 
+            <div class="form-row">
+                <label>
+                    <span>Son Ödeme Tarihi</span>
+					<input type="date" name="drp_sonodeme2"/>
+                </label>
+            </div>
+
+            <div class="form-row">
+                <label>
+                    <span>Tutar</span>
+                    <input type="text" name="txt_tutar2">
+                </label>
+            </div>
 
             <div class="form-row">
                 <label>
                     <span>Fatura Kesim Ayı</span>
-                    <select name="dropdown_ay">
+                    <select name="ShowMonth2">
                         <option>Ocak</option>
                         <option>Şubat</option>
                         <option>Mart</option>
@@ -59,10 +72,15 @@
                 </label>
             </div>
 
+
             <div class="form-row">
-                <button type="submit" name="btn_fatura">Fatura Sil!</button>
+                <label>
+                    <span>Açıklama</span>
+                    <input type="text" name="description2"/>
+                </label>
             </div>
 
+           
         </form>
 
     </div>

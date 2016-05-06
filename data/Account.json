@@ -25,6 +25,17 @@
       "CreateTime": "11:08:54",
       "CreateIP": "10.75.2.215"
      }
+    },
+    {
+     "Month": "Temmuz",
+     "Amount": "120",
+     "DeadLine": "2016-05-12",
+     "Description": "",
+     "System_Info": {
+      "CreateDate": "06.05.2016",
+      "CreateTime": "14:28:25",
+      "CreateIP": "10.75.2.215"
+     }
     }
    ],
    "Water": [
@@ -40,7 +51,19 @@
      }
     }
    ],
-   "Gas": null,
+   "Gas": [
+    {
+     "Month": "Ocak",
+     "Amount": "",
+     "DeadLine": "2016-05-13",
+     "Description": "",
+     "System_Info": {
+      "CreateDate": "06.05.2016",
+      "CreateTime": "11:28:47",
+      "CreateIP": "10.75.2.215"
+     }
+    }
+   ],
    "Phone": [
     {
      "Month": "Mayıs",
