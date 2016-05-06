@@ -9,7 +9,7 @@
 
 	<title>FTS Anasayfa</title>
 
-	<link rel="stylesheet" href="/css/index.css">
+	<link rel="stylesheet" href="css/index.css">
 <style>
 
 
@@ -19,34 +19,30 @@
 
     <div class="main-content">
 
-        <!-- You only need this form and the form-labels-on-top.css -->
 
-        <form class="form-labels-on-top" action="./addbill.html	">
+        <form class="form-labels-on-top" >
 
             <div class="form-title-row">
                 <h1>FTS</h1>
             </div>
-
-            <div class="form-row">
-
-               
-				<button type=button onClick="location.href='addbill.html'"/>Fatura Ekle!</button>
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				 <button type="submit" name="btn_ftrsil">Fatura Sil!</button>
-
-            </div>
-
-                <button type="submit" name="btn_fatura">Fatura Ekle!</button>
-			</div>
-
-
+			<center><table>
+			<tr>
+				<td>
+					<div class="form-row" action="./addbill.html	"> 
+						<button type="submit">Fatura Ekle!</button>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					</div>
+				</td>
+				<td>
+					<div class="form-row" action="./dellbill.html	"> 
+						<button type="submit" name="btn_ftrsil">Fatura Sil!</button>
+					</div>
+				</td>
+				</tr>
+			</table></center>
         </form>
 		
-		 <form class="form-labels-on-top" action="./delbill.html	">
-			<div class="form-row">
-                <button type="submit" name="btn_sil">Fatura Sil!</button>
-			</div>
-        </form>
+	
 
     </div>
 
