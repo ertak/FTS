@@ -10,8 +10,12 @@
 	<title>FTS Anasayfa</title>
 
 	<link rel="stylesheet" href="css/index.css">
-<style>
 
+	
+<style>
+.buton-size{
+width: 150px; height: 40px;cursor:pointer;
+}
 
 </style>
 </head>
@@ -29,13 +33,13 @@
 			<tr>
 				<td>
 					<div class="form-row"> 
-						<button type="submit" formmethod="post" formaction="./addbill.html">Fatura Ekle</button>
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<button type="submit" class="buton-size" formmethod="post" formaction="./addbill">Fatura Ekle</button>
+						
 					</div>
 				</td>
 				<td>
 					<div class="form-row"> 
-						<button type="submit" formmethod="post" formaction="./delbill.html">Fatura Sil</button>
+						<button type="submit" class="buton-size"  formmethod="post" formaction="./delbill">Fatura Sil</button>
 					</div>
 				</td>
 			
@@ -43,8 +47,7 @@
 			<tr>
 				<td>
 					<div class="form-row"> 
-						<button type="submit" formmethod="post" formaction="./showbill.html">Fatura Görüntüle</button>
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<button type="submit" class="buton-size" formmethod="post" formaction="./showbill" name="buton" value="x">Fatura Görüntüle</button>	
 					</div>
 				</td>
 			</tr>

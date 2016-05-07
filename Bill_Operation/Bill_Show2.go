@@ -1,22 +1,22 @@
 package Bill_Operation
+
 import (
-	"net/http"
 	"encoding/json"
-	"os"
 	"fmt"
-	"io/ioutil"
 	"html/template"
+	"io/ioutil"
+	"net/http"
+	"os"
 )
 
-var tpl *template.Template
-func init(){
-	tpl=template.Must(template.ParseFiles("web/showbill2.html"))
-}
-
-
-func Bill_Show2(w http.ResponseWriter,r *http.Request)  {
+func Bill_Show2(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("girdim-Show2")
-	tpl.Execute(w,nil)
+	w.Header().Set("Content-Type", "text/html;text/css")
+	//template.Must(template.ParseFiles("./web/showbill2.html")).Execute(w, nil)
+	t, _ := template.ParseFiles("./web/showbill2.html")
+	f := fmt.Println
+	f("Fatura Tipi:", r.FormValue("ShowBillType"))
+	f("Fatura Kesim Ayı:", r.FormValue("ShowMonth"))
 	file, e := ioutil.ReadFile("data/Account.json")
 	if e != nil {
 		fmt.Printf("File error: %v\n", e)
@@ -25,13 +25,15 @@ func Bill_Show2(w http.ResponseWriter,r *http.Request)  {
 
 	json.Unmarshal(file, &Customer)
 
-	switch show_billtype {
+	switch r.FormValue("ShowBillType") {
 	case "Elektrik":
-		for _,valueShow := range Customer.Account.Bills.Electricity{
-			if show_billMonth == valueShow.Month{
-				r.Form["ShowBillType2"][0] = show_billtype
-				fmt.Println("Esas bak!!!:",r.Form["ShowBillType2"][0])
+		for _, valueShow := range Customer.Account.Bills.Electricity {
+			if r.FormValue("ShowMonth") == valueShow.Month {
+				r.Form["ShowBillType2"][0] = r.FormValue("ShowBillType")
+				fmt.Println("secenklerde")
+				fmt.Println("Esas bak!!!:", r.Form["ShowBillType2"][0])
 			}
 		}
 	}
+	t.Execute(w, nil)
 }
