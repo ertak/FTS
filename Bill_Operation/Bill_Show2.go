@@ -25,7 +25,7 @@ func Bill_Show2(w http.ResponseWriter, r *http.Request) {
 
 	json.Unmarshal(file, &Customer)
 
-	switch r.FormValue("ShowBillType") {
+	/*switch r.FormValue("ShowBillType") {
 	case "Elektrik":
 		for _, valueShow := range Customer.Account.Bills.Electricity {
 			if r.FormValue("ShowMonth") == valueShow.Month {
@@ -34,6 +34,6 @@ func Bill_Show2(w http.ResponseWriter, r *http.Request) {
 				fmt.Println("Esas bak!!!:", r.Form["ShowBillType2"][0])
 			}
 		}
-	}
+	}*/
 	t.Execute(w, nil)
 }
