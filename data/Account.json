@@ -36,6 +36,17 @@
       "CreateTime": "14:28:25",
       "CreateIP": "10.75.2.215"
      }
+    },
+    {
+     "Month": "Aralık",
+     "Amount": "120",
+     "DeadLine": "2016-05-03",
+     "Description": "",
+     "System_Info": {
+      "CreateDate": "08.05.2016",
+      "CreateTime": "13:18:31",
+      "CreateIP": "192.168.1.35"
+     }
     }
    ],
    "Water": [
@@ -88,7 +99,19 @@
      }
     }
    ],
-   "Other": []
+   "Other": [
+    {
+     "Month": "Aralık",
+     "Amount": "250",
+     "DeadLine": "2016-05-05",
+     "Description": "",
+     "System_Info": {
+      "CreateDate": "08.05.2016",
+      "CreateTime": "13:21:36",
+      "CreateIP": "192.168.1.35"
+     }
+    }
+   ]
   }
  }
 }
