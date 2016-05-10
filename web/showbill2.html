@@ -27,28 +27,28 @@
 			<div class="form-row">
                 <label>
                     <span>Fatura Tipi</span>
-					<input disabled type="text" name="ShowBillType2" value="Elektrik" />
+					<input disabled type="text" name="ShowBillType2" value="{{.Type}}" />
                 </label>
             </div>
 
             <div class="form-row">
                 <label>
                     <span>Son Ödeme Tarihi</span>
-					<input disabled type="date" name="drp_sonodeme2"/>
+					<input disabled type="date" name="drp_sonodeme2" value="{{.Deadline}}"/>
                 </label>
             </div>
 
             <div class="form-row">
                 <label>
                     <span>Tutar</span>
-                    <input disabled type="text" name="txt_tutar2" value="120 TL">
+                    <input disabled type="text" name="txt_tutar2" value="{{.Amount}}">
                 </label>
             </div>
 
             <div class="form-row">
                 <label>
                     <span>Fatura Kesim Ayı</span>
-					<input disabled type="text" name="ShowMonth2" value="Ocak">
+					<input disabled type="text" name="ShowMonth2" value="{{.Month}}">
                 </label>
             </div>
 
@@ -56,7 +56,7 @@
             <div class="form-row">
                 <label>
                     <span>Açıklama</span>
-                    <input disabled type="text" name="description2" value="Description"/>
+                    <input disabled type="text" name="description2" value="{{.Desc}}"/>
                 </label>
             </div>
 

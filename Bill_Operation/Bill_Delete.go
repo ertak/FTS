@@ -33,7 +33,8 @@ func Delete_Bill(w http.ResponseWriter, r *http.Request)  {
 		for i,value := range Customer.Account.Bills.Electricity{
 			if  frm_ay == value.Month {
 				Customer.Account.Bills.Electricity = append(Customer.Account.Bills.Electricity[:i], Customer.Account.Bills.Electricity[i+1:]...)
-			}else {
+
+			}else  {
 				fmt.Fprintln(w,errValueDelete)
 			}
 		}
@@ -75,7 +76,7 @@ func Delete_Bill(w http.ResponseWriter, r *http.Request)  {
 
 		billdeljs, err := json.MarshalIndent(Customer, "", " ")
 		Error.WriteJsonFile(err)
-		fmt.Println(string(billdeljs))
+		//fmt.Println(string(billdeljs))
 
 		ioutil.WriteFile("data/Account.json", billdeljs, 0644)
 

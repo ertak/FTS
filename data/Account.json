@@ -5,28 +5,6 @@
   "Bills": {
    "Electricity": [
     {
-     "Month": "Mart",
-     "Amount": "1",
-     "DeadLine": "2016-05-30",
-     "Description": "1",
-     "System_Info": {
-      "CreateDate": "05.05.2016",
-      "CreateTime": "11:07:18",
-      "CreateIP": "10.75.2.215"
-     }
-    },
-    {
-     "Month": "Ocak",
-     "Amount": "34",
-     "DeadLine": "2016-05-18",
-     "Description": "34",
-     "System_Info": {
-      "CreateDate": "05.05.2016",
-      "CreateTime": "11:08:54",
-      "CreateIP": "10.75.2.215"
-     }
-    },
-    {
      "Month": "Temmuz",
      "Amount": "120",
      "DeadLine": "2016-05-12",
@@ -38,30 +16,40 @@
      }
     },
     {
-     "Month": "Aralık",
-     "Amount": "120",
-     "DeadLine": "2016-05-03",
-     "Description": "",
+     "Month": "Nisan",
+     "Amount": "250",
+     "DeadLine": "2016-05-05",
+     "Description": "yok",
      "System_Info": {
-      "CreateDate": "08.05.2016",
-      "CreateTime": "13:18:31",
-      "CreateIP": "192.168.1.35"
+      "CreateDate": "10.05.2016",
+      "CreateTime": "11:37:44",
+      "CreateIP": "10.75.2.215"
      }
-    }
-   ],
-   "Water": [
+    },
     {
-     "Month": "Ocak",
-     "Amount": "20",
-     "DeadLine": "2016-04-29",
-     "Description": "",
+     "Month": "Aralık",
+     "Amount": "250",
+     "DeadLine": "2016-05-05",
+     "Description": "yok",
      "System_Info": {
-      "CreateDate": "05.05.2016",
-      "CreateTime": "16:29:00",
+      "CreateDate": "10.05.2016",
+      "CreateTime": "11:37:44",
+      "CreateIP": "10.75.2.215"
+     }
+    },
+    {
+     "Month": "Mayıs",
+     "Amount": "250",
+     "DeadLine": "2016-05-05",
+     "Description": "yok",
+     "System_Info": {
+      "CreateDate": "10.05.2016",
+      "CreateTime": "11:37:44",
       "CreateIP": "10.75.2.215"
      }
     }
    ],
+   "Water": [],
    "Gas": [
     {
      "Month": "Ocak",
@@ -101,14 +89,14 @@
    ],
    "Other": [
     {
-     "Month": "Aralık",
-     "Amount": "250",
-     "DeadLine": "2016-05-05",
+     "Month": "Ekim",
+     "Amount": "",
+     "DeadLine": "",
      "Description": "",
      "System_Info": {
-      "CreateDate": "08.05.2016",
-      "CreateTime": "13:21:36",
-      "CreateIP": "192.168.1.35"
+      "CreateDate": "09.05.2016",
+      "CreateTime": "13:55:06",
+      "CreateIP": "10.75.2.215"
      }
     }
    ]

@@ -19,9 +19,6 @@ func Add_Bill(w http.ResponseWriter, r *http.Request) {
 	f := fmt.Println
 	frm_billtype := r.FormValue("BillTypeSelect")
 	frm_sonodeme := r.FormValue("drp_sonodeme")
-
-	r.Form["BillTypeSelect"][0] = show_billtype
-	fmt.Println("Esas bakılacak:", r.Form["BillTypeSelect"][0])
 	frm_tutar := r.FormValue("txt_tutar")
 	frm_ay := r.FormValue("dropdown_ay")
 	frm_desc := r.FormValue("description")
