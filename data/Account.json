@@ -5,29 +5,7 @@
   "Bills": {
    "Electricity": [
     {
-     "Month": "Temmuz",
-     "Amount": "120",
-     "DeadLine": "2016-05-12",
-     "Description": "",
-     "System_Info": {
-      "CreateDate": "06.05.2016",
-      "CreateTime": "14:28:25",
-      "CreateIP": "10.75.2.215"
-     }
-    },
-    {
      "Month": "Nisan",
-     "Amount": "250",
-     "DeadLine": "2016-05-05",
-     "Description": "yok",
-     "System_Info": {
-      "CreateDate": "10.05.2016",
-      "CreateTime": "11:37:44",
-      "CreateIP": "10.75.2.215"
-     }
-    },
-    {
-     "Month": "Aralık",
      "Amount": "250",
      "DeadLine": "2016-05-05",
      "Description": "yok",
