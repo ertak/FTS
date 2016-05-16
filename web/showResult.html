@@ -1,4 +1,4 @@
-ï»¿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -21,7 +21,7 @@
         <form class="form-labels-on-top" method="POST" action="#" disabled>
 
             <div class="form-title-row">
-                <h1>FTS</h1>
+                <h1>{{.Month}} ayý faturanýz!</h1>
             </div>
 
 			<div class="form-row">
@@ -33,7 +33,7 @@
 
             <div class="form-row">
                 <label>
-                    <span>Son Ã–deme Tarihi</span>
+                    <span>Son Ödeme Tarihi</span>
 					<input disabled type="date" name="drp_sonodeme2" value="{{.Deadline}}"/>
                 </label>
             </div>
@@ -47,7 +47,7 @@
 
             <div class="form-row">
                 <label>
-                    <span>Fatura Kesim AyÄ±</span>
+                    <span>Fatura Kesim Ayý</span>
 					<input disabled type="text" name="ShowMonth2" value="{{.Month}}">
                 </label>
             </div>
@@ -55,15 +55,12 @@
 
             <div class="form-row">
                 <label>
-                    <span>AÃ§Ä±klama</span>
+                    <span>Açýklama</span>
                     <input disabled type="text" name="description2" value="{{.Desc}}"/>
                 </label>
             </div>
 			
-			  <div class="form-row">
-					<center><button type="submit" class="buton-size" formmethod="post" formaction="/" formtarget="_self">Anasayfa</button></center>
-            </div>
-
+			 
 
            
         </form>
