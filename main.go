@@ -15,7 +15,7 @@ func main() {
 	http.HandleFunc("/showbill", Bill_Operation.Bill_Show)
 	http.HandleFunc("/showbill2", Bill_Operation.Bill_Show2)
 	http.HandleFunc("/analiz", Bill_Operation.Bill_Analysis)
-	err := http.ListenAndServe(":8080", nil)
+	err := http.ListenAndServe(":8090", nil)
 	if err != nil {
 		log.Fatal("ListenAndServe", err)
 	}
