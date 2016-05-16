@@ -49,7 +49,7 @@ func Add_Bill(w http.ResponseWriter, r *http.Request) {
 
 	errValueAdd := errors.New("Aynı döneme ait fatura sistemde eklidir!")
 	switch frm_billtype {
-
+	//test
 	case "Elektrik":
 		counter1 := 0
 		for _, valueAdd := range Customer.Account.Bills.Electricity {
