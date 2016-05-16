@@ -5,6 +5,7 @@
   "Bills": {
    "Electricity": [
     {
+     "BillType": "",
      "Month": "Mayıs",
      "Amount": "250",
      "DeadLine": "2016-05-05",
@@ -16,6 +17,7 @@
      }
     },
     {
+     "BillType": "",
      "Month": "Haziran",
      "Amount": "120",
      "DeadLine": "2016-05-18",
@@ -27,6 +29,7 @@
      }
     },
     {
+     "BillType": "",
      "Month": "Şubat",
      "Amount": "23",
      "DeadLine": "2016-05-04",
@@ -38,6 +41,7 @@
      }
     },
     {
+     "BillType": "",
      "Month": "Ocak",
      "Amount": "",
      "DeadLine": "",
@@ -49,6 +53,7 @@
      }
     },
     {
+     "BillType": "",
      "Month": "Mart",
      "Amount": "",
      "DeadLine": "",
@@ -58,11 +63,37 @@
       "CreateTime": "17:47:33",
       "CreateIP": "10.75.2.215"
      }
+    },
+    {
+     "BillType": "",
+     "Month": "Ekim",
+     "Amount": "4",
+     "DeadLine": "2016-05-11",
+     "Description": "4",
+     "System_Info": {
+      "CreateDate": "16.05.2016",
+      "CreateTime": "17:02:25",
+      "CreateIP": "10.75.2.215"
+     }
     }
    ],
-   "Water": [],
+   "Water": [
+    {
+     "BillType": "",
+     "Month": "Ocak",
+     "Amount": "",
+     "DeadLine": "",
+     "Description": "",
+     "System_Info": {
+      "CreateDate": "16.05.2016",
+      "CreateTime": "17:03:23",
+      "CreateIP": "10.75.2.215"
+     }
+    }
+   ],
    "Gas": [
     {
+     "BillType": "",
      "Month": "Ocak",
      "Amount": "",
      "DeadLine": "2016-05-13",
@@ -76,6 +107,7 @@
    ],
    "Phone": [
     {
+     "BillType": "",
      "Month": "Mayıs",
      "Amount": "120",
      "DeadLine": "2016-06-03",
@@ -87,6 +119,7 @@
      }
     },
     {
+     "BillType": "",
      "Month": "Mart",
      "Amount": "120",
      "DeadLine": "2016-05-13",
@@ -96,17 +129,54 @@
       "CreateTime": "16:31:01",
       "CreateIP": "10.75.2.215"
      }
+    },
+    {
+     "BillType": "",
+     "Month": "Ocak",
+     "Amount": "65",
+     "DeadLine": "",
+     "Description": "",
+     "System_Info": {
+      "CreateDate": "16.05.2016",
+      "CreateTime": "15:08:59",
+      "CreateIP": "10.75.2.215"
+     }
     }
    ],
    "Other": [
     {
+     "BillType": "",
      "Month": "Ekim",
      "Amount": "",
-     "DeadLine": "",
+     "DeadLine": "2016-05-10",
      "Description": "",
      "System_Info": {
-      "CreateDate": "09.05.2016",
-      "CreateTime": "13:55:06",
+      "CreateDate": "16.05.2016",
+      "CreateTime": "16:40:15",
+      "CreateIP": "10.75.2.215"
+     }
+    },
+    {
+     "BillType": "",
+     "Month": "Aralık",
+     "Amount": "6",
+     "DeadLine": "2016-05-04",
+     "Description": "u",
+     "System_Info": {
+      "CreateDate": "16.05.2016",
+      "CreateTime": "16:53:03",
+      "CreateIP": "10.75.2.215"
+     }
+    },
+    {
+     "BillType": "",
+     "Month": "Ağustos",
+     "Amount": "5",
+     "DeadLine": "2016-05-18",
+     "Description": "tyy",
+     "System_Info": {
+      "CreateDate": "16.05.2016",
+      "CreateTime": "17:01:21",
       "CreateIP": "10.75.2.215"
      }
     }

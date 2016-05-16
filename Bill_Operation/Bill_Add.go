@@ -10,9 +10,22 @@ import (
 	"io/ioutil"
 	"net/http"
 	"os"
+"html/template"
 )
 
 var Customer Model.User
+
+
+type Show1 struct{
+	Type1 string
+	Month1 string
+	Amount1 string
+	Deadline1 string
+	Desc1 string
+}
+
+
+
 
 func Add_Bill(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("Girdim-- ADD")
@@ -46,7 +59,6 @@ func Add_Bill(w http.ResponseWriter, r *http.Request) {
 		Description: frm_desc,
 		SystemInfo:  System.Info{CreateDate: System.Date(), CreateTime: System.Time(), CreateIP: System.IPControl()},
 	}
-
 	errValueAdd := errors.New("Aynı döneme ait fatura sistemde eklidir!")
 	switch frm_billtype {
 	//test
@@ -134,7 +146,9 @@ func Add_Bill(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	w.Header().Set("Content-Type", "application/json;text/html; charset=utf-8")
-	w.Write(billaddjs)
+	w.Header().Set("Content-Type","text/html;text/css")
+	BillInfo1:=Show1{Type1:frm_billtype,Month1:frm_ay,Amount1:frm_tutar,Deadline1:frm_sonodeme,Desc1:frm_desc}
+	t, _ := template.ParseFiles("./web/showResult.html")
+	t.Execute(w,BillInfo1)
 
 }
