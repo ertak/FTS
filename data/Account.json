@@ -69,6 +69,39 @@
       "CreateTime": "17:02:25",
       "CreateIP": "10.75.2.215"
      }
+    },
+    {
+     "Month": "Nisan",
+     "Amount": "2525",
+     "DeadLine": "2016-05-05",
+     "Description": "",
+     "System_Info": {
+      "CreateDate": "17.05.2016",
+      "CreateTime": "09:47:47",
+      "CreateIP": "10.75.3.138"
+     }
+    },
+    {
+     "Month": "Ağustos",
+     "Amount": "150",
+     "DeadLine": "2016-05-06",
+     "Description": "",
+     "System_Info": {
+      "CreateDate": "17.05.2016",
+      "CreateTime": "10:06:04",
+      "CreateIP": "10.75.3.138"
+     }
+    },
+    {
+     "Month": "Eylül",
+     "Amount": "",
+     "DeadLine": "",
+     "Description": "",
+     "System_Info": {
+      "CreateDate": "17.05.2016",
+      "CreateTime": "10:07:55",
+      "CreateIP": "10.75.3.138"
+     }
     }
    ],
    "Water": [
@@ -81,6 +114,17 @@
       "CreateDate": "16.05.2016",
       "CreateTime": "17:03:23",
       "CreateIP": "10.75.2.215"
+     }
+    },
+    {
+     "Month": "Mayıs",
+     "Amount": "1516",
+     "DeadLine": "2016-05-05",
+     "Description": "",
+     "System_Info": {
+      "CreateDate": "17.05.2016",
+      "CreateTime": "15:24:34",
+      "CreateIP": "10.75.3.138"
      }
     }
    ],
@@ -130,18 +174,106 @@
       "CreateTime": "15:08:59",
       "CreateIP": "10.75.2.215"
      }
+    },
+    {
+     "Month": "Nisan",
+     "Amount": "180",
+     "DeadLine": "2016-05-19",
+     "Description": "",
+     "System_Info": {
+      "CreateDate": "17.05.2016",
+      "CreateTime": "09:35:18",
+      "CreateIP": "10.75.3.138"
+     }
     }
    ],
    "Other": [
     {
-     "Month": "Mart",
-     "Amount": "87",
-     "DeadLine": "2016-05-05",
-     "Description": "ugur2",
+     "Month": "Ocak",
+     "Amount": "500",
+     "DeadLine": "2016-05-14",
+     "Description": "",
      "System_Info": {
       "CreateDate": "17.05.2016",
-      "CreateTime": "09:18:38",
-      "CreateIP": "10.75.2.215"
+      "CreateTime": "09:50:56",
+      "CreateIP": "10.75.3.138"
+     }
+    },
+    {
+     "Month": "Şubat",
+     "Amount": "900",
+     "DeadLine": "2016-05-13",
+     "Description": "",
+     "System_Info": {
+      "CreateDate": "17.05.2016",
+      "CreateTime": "09:51:51",
+      "CreateIP": "10.75.3.138"
+     }
+    },
+    {
+     "Month": "Mart",
+     "Amount": "63",
+     "DeadLine": "2016-05-06",
+     "Description": "",
+     "System_Info": {
+      "CreateDate": "17.05.2016",
+      "CreateTime": "09:52:50",
+      "CreateIP": "10.75.3.138"
+     }
+    },
+    {
+     "Month": "Nisan",
+     "Amount": "59",
+     "DeadLine": "2016-04-30",
+     "Description": "",
+     "System_Info": {
+      "CreateDate": "17.05.2016",
+      "CreateTime": "10:01:04",
+      "CreateIP": "10.75.3.138"
+     }
+    },
+    {
+     "Month": "Mayıs",
+     "Amount": "40",
+     "DeadLine": "2016-05-01",
+     "Description": "",
+     "System_Info": {
+      "CreateDate": "17.05.2016",
+      "CreateTime": "10:02:13",
+      "CreateIP": "10.75.3.138"
+     }
+    },
+    {
+     "Month": "Haziran",
+     "Amount": "150",
+     "DeadLine": "2016-05-06",
+     "Description": "",
+     "System_Info": {
+      "CreateDate": "17.05.2016",
+      "CreateTime": "10:03:33",
+      "CreateIP": "10.75.3.138"
+     }
+    },
+    {
+     "Month": "Ekim",
+     "Amount": "",
+     "DeadLine": "",
+     "Description": "",
+     "System_Info": {
+      "CreateDate": "17.05.2016",
+      "CreateTime": "10:15:50",
+      "CreateIP": "10.75.3.138"
+     }
+    },
+    {
+     "Month": "Eylül",
+     "Amount": "",
+     "DeadLine": "2016-05-04",
+     "Description": "",
+     "System_Info": {
+      "CreateDate": "17.05.2016",
+      "CreateTime": "10:20:23",
+      "CreateIP": "10.75.3.138"
      }
     }
    ]

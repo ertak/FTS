@@ -18,7 +18,7 @@
 
         <!-- You only need this form and the form-labels-on-top.css -->
 
-        <form class="form-labels-on-top" method="POST" action="#">
+        <form class="form-labels-on-top" method="POST" action="/addbill" target="Popup">
 
             <div class="form-title-row">
                 <h1>FTS</h1>
@@ -84,10 +84,10 @@
              <!-- <center><button type="submit"  class="buton-size" formaction="/addbill" formmethod="post"  name="btn_fatura" >Fatura Oluştur</button></center> -->
 	
 			
-			<center><button type="submit"  class="buton-size" onClick="window.open('/addbill','Show','width=800,height=800',resizable=yes);" formaction="/addbill" formmethod="post"  name="btn_fatura" >Fatura Oluştur</button></center>
+			<center><button type="submit"  onclick="Popup=window.open('about:blank','Popup','width=500,height=650,toolbar=no,copyhistory=no,scrolling=no,menubar=no,resizable=no'); Popup.moveTo(200,200); " class="buton-size"   formmethod="post"  name="btn_fatura" >Fatura Oluştur</button></center>
 
 
-			<!--onClick="window.open('/addbill','Show','width=800,height=800');"-->
+		
             </div>
 
         </form>
