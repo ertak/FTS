@@ -14,47 +14,34 @@
       "CreateTime": "10:07:55",
       "CreateIP": "10.75.3.138"
      }
+    },
+    {
+     "Month": "Ağustos",
+     "Amount": "2",
+     "DeadLine": "2016-05-10",
+     "Description": "3",
+     "System_Info": {
+      "CreateDate": "20.05.2016",
+      "CreateTime": "15:37:58",
+      "CreateIP": "10.75.2.215"
+     }
     }
    ],
    "Water": [
     {
      "Month": "Mayıs",
-     "Amount": "1516",
-     "DeadLine": "2016-05-05",
-     "Description": "",
+     "Amount": "555",
+     "DeadLine": "2016-05-03",
+     "Description": "55",
      "System_Info": {
-      "CreateDate": "17.05.2016",
-      "CreateTime": "15:24:34",
-      "CreateIP": "10.75.3.138"
-     }
-    }
-   ],
-   "Gas": [
-    {
-     "Month": "Ocak",
-     "Amount": "",
-     "DeadLine": "2016-05-13",
-     "Description": "",
-     "System_Info": {
-      "CreateDate": "06.05.2016",
-      "CreateTime": "11:28:47",
+      "CreateDate": "20.05.2016",
+      "CreateTime": "15:14:47",
       "CreateIP": "10.75.2.215"
      }
     }
    ],
-   "Phone": [
-    {
-     "Month": "Nisan",
-     "Amount": "180",
-     "DeadLine": "2016-05-19",
-     "Description": "",
-     "System_Info": {
-      "CreateDate": "17.05.2016",
-      "CreateTime": "09:35:18",
-      "CreateIP": "10.75.3.138"
-     }
-    }
-   ],
+   "Gas": [],
+   "Phone": [],
    "Other": [
     {
      "Month": "Eylül",

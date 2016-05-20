@@ -16,7 +16,6 @@
 
     <div class="main-content">
 
-        <!-- You only need this form and the form-labels-on-top.css -->
 
         <form class="form-labels-on-top" method="POST" >
 
@@ -27,7 +26,7 @@
 			<div class="form-row">
                 <label>
                     <span>Fatura Tipi</span>
-                 <select name="BillTypeSelect">
+                 <select name="BillTypeSelect" id="billSelect">
 					<option value="Elektrik" name="elektrik">Elektrik</option>
 					<option value="Doğalgaz" name="dogalgaz">Doğalgaz</option>
 					<option value="Su" name="su">Su</option>
@@ -37,24 +36,19 @@
 				</select>
                 </label>
             </div>
-						<!--<script>
-						$($.parseJSON(data.Account.Bills.Other)).map(function () {
-							return $('<option>').val(this.value).text(this.label);
-						}).appendTo('#dropmonth');
-						</script>-->
-            <button type="submit" id="get-data" class="buton-size"  name="btn_fatura">Aylar</button>
 
-            <div  id="show-data"></div>
+            <a href="#"  id="get-deldata">Getir</a>
+            <div  id="del-data" class="form-row"></div>
             <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
             <script src="getMonth.js"></script>
 
-
-
             <div class="form-row">
-                <center><button type="submit" class="buton-size" formaction="/delbill" name="btn_fatura">Fatura Öde</button></center>
+                <center><button type="submit" class="buton-size"  formaction="/delbill" name="btn_fatura">Fatura Öde</button></center>
             </div>
 
         </form>
+
+       <!-- <button  id="get-data" class="buton-size">Aylar</button>-->
 
     </div>
 
