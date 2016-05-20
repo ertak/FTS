@@ -6,7 +6,7 @@
    "Electricity": [
     {
      "Month": "Eylül",
-     "Amount": "",
+     "Amount": "300",
      "DeadLine": "",
      "Description": "",
      "System_Info": {
@@ -20,6 +20,17 @@
     {
      "Month": "Mayıs",
      "Amount": "1516",
+     "DeadLine": "2016-05-05",
+     "Description": "",
+     "System_Info": {
+      "CreateDate": "17.05.2016",
+      "CreateTime": "15:24:34",
+      "CreateIP": "10.75.3.138"
+     }
+    },
+    {
+     "Month": "Haziran",
+     "Amount": "1515",
      "DeadLine": "2016-05-05",
      "Description": "",
      "System_Info": {
@@ -58,8 +69,19 @@
    "Other": [
     {
      "Month": "Eylül",
-     "Amount": "",
+     "Amount": "100",
      "DeadLine": "2016-05-04",
+     "Description": "",
+     "System_Info": {
+      "CreateDate": "17.05.2016",
+      "CreateTime": "10:20:23",
+      "CreateIP": "10.75.3.138"
+     }
+    },
+    {
+     "Month": "Ekim",
+     "Amount": "500",
+     "DeadLine": "2017-09-04",
      "Description": "",
      "System_Info": {
       "CreateDate": "17.05.2016",
