@@ -7,8 +7,14 @@ import (
 	"errors"
 	"FTS/Error"
 	"net/http"
+	"html/template"
 )
 
+
+type del_Result struct{
+	Type_del_Result string
+	Month_del_Result string
+}
 
 func Delete_Bill(w http.ResponseWriter, r *http.Request)  {
 
@@ -101,6 +107,8 @@ func Delete_Bill(w http.ResponseWriter, r *http.Request)  {
 			return
 		}
 
-		w.Header().Set("Content-Type","application/json")
-		w.Write(billdeljs)
+		w.Header().Set("Content-Type","text/html;text/css")
+		BillDel_Result:= del_Result{Type_del_Result:frm_billtype,Month_del_Result:frm_ay}
+		t,_ := template.ParseFiles("./web/delResult.html")
+		t.Execute(w,BillDel_Result)
 }

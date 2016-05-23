@@ -5,48 +5,94 @@
   "Bills": {
    "Electricity": [
     {
-     "Month": "Eylül",
-     "Amount": "",
-     "DeadLine": "",
+     "Month": "Temmuz",
+     "Amount": "1516",
+     "DeadLine": "2016-05-05",
      "Description": "",
      "System_Info": {
       "CreateDate": "17.05.2016",
-      "CreateTime": "10:07:55",
+      "CreateTime": "15:24:34",
       "CreateIP": "10.75.3.138"
      }
     },
     {
-     "Month": "Ağustos",
-     "Amount": "2",
-     "DeadLine": "2016-05-10",
-     "Description": "3",
+     "Month": "Haziran",
+     "Amount": "1516",
+     "DeadLine": "2016-05-05",
+     "Description": "",
      "System_Info": {
-      "CreateDate": "20.05.2016",
-      "CreateTime": "15:37:58",
-      "CreateIP": "10.75.2.215"
+      "CreateDate": "17.05.2016",
+      "CreateTime": "15:24:34",
+      "CreateIP": "10.75.3.138"
      }
     }
    ],
    "Water": [
     {
      "Month": "Mayıs",
-     "Amount": "555",
-     "DeadLine": "2016-05-03",
-     "Description": "55",
+     "Amount": "1516",
+     "DeadLine": "2016-05-05",
+     "Description": "",
      "System_Info": {
-      "CreateDate": "20.05.2016",
-      "CreateTime": "15:14:47",
+      "CreateDate": "17.05.2016",
+      "CreateTime": "15:24:34",
+      "CreateIP": "10.75.3.138"
+     }
+    },
+    {
+     "Month": "Haziran",
+     "Amount": "1515",
+     "DeadLine": "2016-05-05",
+     "Description": "",
+     "System_Info": {
+      "CreateDate": "17.05.2016",
+      "CreateTime": "15:24:34",
+      "CreateIP": "10.75.3.138"
+     }
+    }
+   ],
+   "Gas": [
+    {
+     "Month": "Ocak",
+     "Amount": "",
+     "DeadLine": "2016-05-13",
+     "Description": "",
+     "System_Info": {
+      "CreateDate": "06.05.2016",
+      "CreateTime": "11:28:47",
       "CreateIP": "10.75.2.215"
      }
     }
    ],
-   "Gas": [],
-   "Phone": [],
+   "Phone": [
+    {
+     "Month": "Nisan",
+     "Amount": "180",
+     "DeadLine": "2016-05-19",
+     "Description": "",
+     "System_Info": {
+      "CreateDate": "17.05.2016",
+      "CreateTime": "09:35:18",
+      "CreateIP": "10.75.3.138"
+     }
+    }
+   ],
    "Other": [
     {
      "Month": "Eylül",
-     "Amount": "",
+     "Amount": "100",
      "DeadLine": "2016-05-04",
+     "Description": "",
+     "System_Info": {
+      "CreateDate": "17.05.2016",
+      "CreateTime": "10:20:23",
+      "CreateIP": "10.75.3.138"
+     }
+    },
+    {
+     "Month": "Ekim",
+     "Amount": "500",
+     "DeadLine": "2017-09-04",
      "Description": "",
      "System_Info": {
       "CreateDate": "17.05.2016",

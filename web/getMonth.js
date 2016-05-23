@@ -1,4 +1,3 @@
-?
 $(document).ready(function () {
 //1. combonun click fonksiyonu alýnacak!
   $('#get-deldata').click(function () {
@@ -100,18 +99,18 @@ $(document).ready(function () {
 
 
         }
-        showData.empty();
+        showData2.empty();
 
         if (Months.length) {
           console.log(Months.length)
           console.log(data)
           var content = '<option>' + Months.join('</option><option>') + '</option>';
           var list = $('<select name="dropdown_ay" id="dropmonth"/>').html(content);
-          showData.append(list);
+          showData2.append(list);
         }
       });
 
-      showData.text('Loading the JSON file.');
+      showData2.text('Loading the JSON file.');
     });
 
 

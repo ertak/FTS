@@ -5,13 +5,35 @@
   "Bills": {
    "Electricity": [
     {
-     "Month": "Eylül",
+     "Month": "Mayıs",
      "Amount": "300",
      "DeadLine": "",
      "Description": "",
      "System_Info": {
       "CreateDate": "17.05.2016",
       "CreateTime": "10:07:55",
+      "CreateIP": "10.75.3.138"
+     }
+     },
+    {
+     "Month": "Temmuz",
+     "Amount": "1516",
+     "DeadLine": "2016-05-05",
+     "Description": "",
+     "System_Info": {
+      "CreateDate": "17.05.2016",
+      "CreateTime": "15:24:34",
+      "CreateIP": "10.75.3.138"
+     }
+    },
+    {
+     "Month": "Haziran",
+     "Amount": "1516",
+     "DeadLine": "2016-05-05",
+     "Description": "",
+     "System_Info": {
+      "CreateDate": "17.05.2016",
+      "CreateTime": "15:24:34",
       "CreateIP": "10.75.3.138"
      }
     }

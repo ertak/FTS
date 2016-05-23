@@ -20,7 +20,6 @@ type Show struct{
 
 
 func Bill_Show2(w http.ResponseWriter, r *http.Request) {
-	//template.Must(template.ParseFiles("./web/showbill2.html")).Execute(w, nil)
 
 	fmt.Println("girdim-Show2")
 
@@ -39,9 +38,10 @@ func Bill_Show2(w http.ResponseWriter, r *http.Request) {
 
 
 	switch r.FormValue("ShowBillType") {
+
 	case "Elektrik":
 		for _,valueShow := range Customer.Account.Bills.Electricity{
-			if r.FormValue("ShowMonth") == valueShow.Month {
+			if r.FormValue("dropdown_ay") == valueShow.Month {
 				Show_Amount = valueShow.Amount
 				Show_Deadline = valueShow.DeadLine
 				Show_Description = valueShow.Description
@@ -49,7 +49,7 @@ func Bill_Show2(w http.ResponseWriter, r *http.Request) {
 		}
 	case "Su":
 		for _,valueShow := range Customer.Account.Bills.Water{
-			if r.FormValue("ShowMonth") == valueShow.Month {
+			if r.FormValue("dropdown_ay") == valueShow.Month {
 				Show_Amount = valueShow.Amount
 				Show_Deadline = valueShow.DeadLine
 				Show_Description = valueShow.Description
@@ -57,7 +57,7 @@ func Bill_Show2(w http.ResponseWriter, r *http.Request) {
 		}
 	case "Doğalgaz":
 		for _,valueShow := range Customer.Account.Bills.Gas{
-			if r.FormValue("ShowMonth") == valueShow.Month {
+			if r.FormValue("dropdown_ay") == valueShow.Month {
 				Show_Amount = valueShow.Amount
 				Show_Deadline = valueShow.DeadLine
 				Show_Description = valueShow.Description
@@ -65,7 +65,7 @@ func Bill_Show2(w http.ResponseWriter, r *http.Request) {
 		}
 	case "Telefon":
 		for _,valueShow := range Customer.Account.Bills.Phone{
-			if r.FormValue("ShowMonth") == valueShow.Month {
+			if r.FormValue("dropdown_ay") == valueShow.Month {
 				Show_Amount = valueShow.Amount
 				Show_Deadline = valueShow.DeadLine
 				Show_Description = valueShow.Description
@@ -73,7 +73,7 @@ func Bill_Show2(w http.ResponseWriter, r *http.Request) {
 		}
 	case "Diğer":
 		for _,valueShow := range Customer.Account.Bills.Other{
-			if r.FormValue("ShowMonth") == valueShow.Month {
+			if r.FormValue("dropdown_ay") == valueShow.Month {
 				Show_Amount = valueShow.Amount
 				Show_Deadline = valueShow.DeadLine
 				Show_Description = valueShow.Description
@@ -81,7 +81,7 @@ func Bill_Show2(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 
-	BillInfo:=Show{Type:r.FormValue("ShowBillType"),Month:r.FormValue("ShowMonth"),Amount:Show_Amount,Deadline:Show_Deadline,Desc:Show_Description}
+	BillInfo:=Show{Type:r.FormValue("ShowBillType"),Month:r.FormValue("dropdown_ay"),Amount:Show_Amount,Deadline:Show_Deadline,Desc:Show_Description}
 
 	t, _ := template.ParseFiles("./web/showbill2.html")
 

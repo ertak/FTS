@@ -24,9 +24,6 @@ type Show1 struct{
 	Desc1 string
 }
 
-
-
-
 func Add_Bill(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("Girdim-- ADD")
 	f := fmt.Println

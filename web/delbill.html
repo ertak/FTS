@@ -17,9 +17,10 @@
     <div class="main-content">
 
 
-        <form class="form-labels-on-top" method="POST" >
+        <form class="form-labels-on-top" method="POST" action="/delbill" target="Popup">
 
-            <div class="form-title-row">
+
+        <div class="form-title-row">
                 <h1>FTS</h1>
             </div>
 
@@ -43,7 +44,9 @@
             <script src="getMonth.js"></script>
 
             <div class="form-row">
-                <center><button type="submit" class="buton-size"  formaction="/delbill" name="btn_fatura">Fatura Öde</button></center>
+              <!--  <center><button type="submit" class="buton-size"  formaction="/delbill" name="btn_fatura">Fatura Öde</button></center>-->
+                <center><button type="submit"  onclick="Popup=window.open('about:blank','Popup','width=500,height=350,toolbar=no,copyhistory=no,scrolling=no,menubar=no,resizable=no'); Popup.moveTo(200,200); " class="buton-size"   formmethod="post"  name="btn_fatura" >Fatura Öde</button></center>
+
             </div>
 
         </form>
