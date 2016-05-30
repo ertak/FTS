@@ -1,5 +1,5 @@
-$(document).ready(function () {
-//1. combonun click fonksiyonu alýnacak!
+ï»¿$(document).ready(function () {
+//1. combonun click fonksiyonu alÄ±nacak!
   $('#get-deldata').click(function () {
     var showData = $('#del-data');
 
@@ -8,7 +8,7 @@ $(document).ready(function () {
     var res = String(strUser);
    console.log(res)
 
-    $.getJSON('Account2.json', function (data) {
+    $.getJSON('http://localhost:8090/data/Account.json', function (data) {
       console.log(data);
     var Months;
 
@@ -29,12 +29,12 @@ $(document).ready(function () {
                       return  item.Month;
                               });
             break;
-        case "Diðer":
+        case "DiÄŸer":
                Months = data.Account.Bills.Other.map(function (item) {
                       return  item.Month;
                               });
             break;
-        case "Doðalgaz":
+        case "DoÄŸalgaz":
                Months = data.Account.Bills.Gas.map(function (item) {
                       return  item.Month;
                                });
@@ -86,12 +86,12 @@ $(document).ready(function () {
                         return  item.Month;
                                 });
               break;
-          case "Diðer":
+          case "DiÄŸer":
                 Months = data.Account.Bills.Other.map(function (item) {
                         return  item.Month;
                                 });
               break;
-          case "Doðalgaz":
+          case "DoÄŸalgaz":
                 Months = data.Account.Bills.Gas.map(function (item) {
                         return  item.Month;
                                  });

@@ -4,19 +4,12 @@ import (
 	"FTS/Bill_Operation"
 	"log"
 	"net/http"
-	"io/ioutil"
-	"fmt"
 )
 
 func main() {
 
-	files, _ := ioutil.ReadDir("./web/../data")
-	for _, f := range files {
-		fmt.Println(f.Name())
-	}
-
-	http.Handle("/", http.FileServer(http.Dir("./web")))
-	http.Handle("css/index.css", http.StripPrefix("css/", http.FileServer(http.Dir("./web/css/index.css"))))
+	http.Handle("/", http.FileServer(http.Dir("../FTS")))
+	http.Handle("./web/css/index.css", http.StripPrefix("css/", http.FileServer(http.Dir("./web/css/index.css"))))
 	http.HandleFunc("/addbill", Bill_Operation.Add_Bill)
 	http.HandleFunc("/delbill", Bill_Operation.Delete_Bill)
 	http.HandleFunc("/showbill", Bill_Operation.Bill_Show)
